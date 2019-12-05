@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>传智健康问题总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果改变不了自己，就去改变世界">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;README.html">
+  <meta name="description" content="我们的pojo 类都实现了Serializable 接口 ,思考为什么?1Serializable  序列化的作用是能够将我们new的对象进行二进制转化，这样就可以进行网络传输了，Dubbo 消费者consumer 与服务者 provider之间是通过网络进行交互的，对象必须实现序列化，否则无法传输。  1*Serializable 序列化2*当一个对象实现了该接口： 能够把 new的对象进行二">
+<meta name="keywords" content="project,javaweb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="传智健康问题总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;%E4%BC%A0%E6%99%BA%E5%81%A5%E5%BA%B7&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="如果改变不了自己，就去改变世界">
+<meta property="og:description" content="我们的pojo 类都实现了Serializable 接口 ,思考为什么?1Serializable  序列化的作用是能够将我们new的对象进行二进制转化，这样就可以进行网络传输了，Dubbo 消费者consumer 与服务者 provider之间是通过网络进行交互的，对象必须实现序列化，否则无法传输。  1*Serializable 序列化2*当一个对象实现了该接口： 能够把 new的对象进行二">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-03T14:42:44.987Z">
+<meta property="og:updated_time" content="2019-12-05T08:42:00.000Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -163,12 +164,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-传智健康" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      传智健康问题总结
+    </h1>
+  
+
+        
+        
+<a href="/2019/12/05/%E4%BC%A0%E6%99%BA%E5%81%A5%E5%BA%B7/" class="archive-article-date">
+  	<time datetime="2019-12-05T08:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-05</time>
+</a>
+	
+
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<h4 id="我们的pojo-类都实现了Serializable-接口-思考为什么"><a href="#我们的pojo-类都实现了Serializable-接口-思考为什么" class="headerlink" title="我们的pojo 类都实现了Serializable 接口 ,思考为什么?"></a>我们的pojo 类都实现了Serializable 接口 ,思考为什么?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Serializable  序列化的作用是能够将我们new的对象进行二进制转化，这样就可以进行网络传输了，Dubbo 消费者consumer 与服务者 provider之间是通过网络进行交互的，对象必须实现序列化，否则无法传输。</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">*Serializable 序列化</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">*当一个对象实现了该接口： 能够把 new的对象进行二进制到磁盘</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">*new CheckItem() A--磁盘 --网络-- new CheckItem() B</span></pre></td></tr></table></figure>
+
+<hr>
+<a id="more"></a>
+
+<h4 id="iframe-标签"><a href="#iframe-标签" class="headerlink" title="iframe 标签"></a>iframe 标签</h4><p>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。说白了可以让两个互相无关的页面强制拼接在一起</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	&lt;iframe src&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&quot;  &gt;&lt;&#x2F;iframe&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	&lt;iframe src&#x3D;&quot;http:&#x2F;&#x2F;www.itcast.cn&quot;&gt;&lt;&#x2F;iframe&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">iframe:由于可以让两个互相无关的页面强制拼接在一起，所以存在安全隐患，可以从Cookie中获取账号密码，但由于现在大多部分使用验证码登录可以有效的减轻这种隐患。</span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="RequestBody注解"><a href="#RequestBody注解" class="headerlink" title="@RequestBody注解"></a>@RequestBody注解</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/add"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> Result <span class="title">add</span><span class="params">(@RequestBody CheckItem checkItem)</span></span>&#123;&#125;</span></pre></td></tr></table></figure>
+
+<p>参数直接从json转换成CheckItem，通过http请求的RequestBody进行传递，@RequestBody可以直接进行转换。反过来  要求数据必须json时 @RequestBody 能自动帮助我们转换成 对象。</p>
+<p>使用@RequestBody注意事项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">1）请求类型必须是post</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">2）请求参数格式必须是json</span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="mybatis-Dao层注意事项"><a href="#mybatis-Dao层注意事项" class="headerlink" title="mybatis Dao层注意事项"></a>mybatis Dao层注意事项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">项目是基于Mybatis的Mapper代理技术实现持久层操作，故只需要提供接口和Mapper映射文件，无须提供实</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">现类</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">1) Mapper.xml文件中的namespace与mapper接口的全限定名相同</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">2) Mapper接口方法名和Mapper.xml中定义的每个statement的id相同</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">3) Mapper接口方法的输入参数类型和mapper.xml中定义的每个sql的parameterType的类型相同</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">4) Mapper接口方法的输出参数类型和mapper.xml中定义的每个sql的resultType的类型相同</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">5) 方法不能重载</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">6) 要求配置文件的&quot;目录&quot;必须和接口所在的目录一致</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">   要求配置文件的&quot;名称&quot;必须和接口名称一致</span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="concat：-模糊查询"><a href="#concat：-模糊查询" class="headerlink" title="concat： 模糊查询"></a>concat： 模糊查询</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectByCondition"</span> <span class="attr">parameterType</span>=<span class="string">"String"</span> <span class="attr">resultType</span>=<span class="string">"com.itheima.pojo.CheckItem"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">       select * from t_checkitem</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       <span class="comment">&lt;!-- 一个值我们test 中必须使用 value --&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"value != null and value.length &gt; 0"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">           </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">where code like CONCAT( CONCAT('%',#&#123;value&#125;) ,'%') or name  like CONCAT( CONCAT('%',#&#123;value&#125;) ,'%')</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">          <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">      <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="selectKey标签"><a href="#selectKey标签" class="headerlink" title="selectKey标签"></a>selectKey标签</h4><p>通过mybatis框架提供的selectKey标签获得自增产生的ID值</p>
+<p>（selectKey是mysql特有的Mybatis封装了selectKey）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">dao 层获取主键ID</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	    <span class="comment">&lt;!--插入检查组数据--&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"add"</span> <span class="attr">parameterType</span>=<span class="string">"com.itheima.pojo.CheckGroup"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">&lt;!--通过mybatis框架提供的selectKey标签获得自增产生的ID值--&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">resultType</span>=<span class="string">"java.lang.Integer"</span> <span class="attr">order</span>=<span class="string">"AFTER"</span> <span class="attr">keyProperty</span>=<span class="string">"id"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            select LAST_INSERT_ID()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        insert into t_checkgroup(code,name,sex,helpCode,remark,attention)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                      values</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        (#&#123;code&#125;,#&#123;name&#125;,#&#123;sex&#125;,#&#123;helpCode&#125;,#&#123;remark&#125;,#&#123;attention&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<p>拓展：</p>
+<p>更简单的方式：</p>
+<p>useGeneratedKeys使用JDBC获取自动生成出来的ID值</p>
+<p>keyProperty赋值到实体对象中的哪个字段</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"add"</span> <span class="attr">parameterType</span>=<span class="string">"com.itheima.pojo.CheckGroup"</span> <span class="attr">useGeneratedKeys</span>=<span class="string">"true"</span> <span class="attr">keyProperty</span>=<span class="string">"id"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">       <span class="comment">&lt;!--通过mybatis框架提供的selectKey标签获得自增产生的ID值--&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       insert into t_checkgroup(code,name,sex,helpCode,remark,attention)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">       values</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">       (#&#123;code&#125;,#&#123;name&#125;,#&#123;sex&#125;,#&#123;helpCode&#125;,#&#123;remark&#125;,#&#123;attention&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="Dubbo使用注意事项"><a href="#Dubbo使用注意事项" class="headerlink" title="Dubbo使用注意事项"></a>Dubbo使用注意事项</h4><p>1）Controller层</p>
+<p>​    spring中使用@Autowire注入service层实现类，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span></pre></td></tr></table></figure>
+
+<p>​    使用dubbo后service实现类注入要使用@Reference</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.annotation.Reference;</span></pre></td></tr></table></figure>
+
+<p>2）service层</p>
+<p>​    spring注入service层使用的@service是基于spring的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span></pre></td></tr></table></figure>
+
+<p>​    使用dubbo后service层注入要使用dubbo的，如果要使用事务的话需要加上接口的.class</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.annotation.Service;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span>(interfaceClass = SetmealService<span class="class">.<span class="keyword">class</span>)</span></span></pre></td></tr></table></figure>
+
+<p>原因：<br>在XxxServiceImpl类上加入事务注解后，Spring会为此类基于JDK动态代理技术创建代理对象，创建的代理对象完整类名为com.sun.proxy.$Proxyxx(xx为数字)，导致Dubbo在进行包匹配时没有成功（因为我们在发布服务时扫描的包为cn.itcast.ervice），所以后面真正发布服务的代码没有执行。<br>解决方法：</p>
+<p>第一步：指定使用cglib的动态代理</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">“transactionManager”</span> <span class="attr">proxy-target-class</span>=<span class="string">“true”/</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<p>第二步：指定服务的接口类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span>(interfaceClass = XxxService<span class="class">.<span class="keyword">class</span>)</span></span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="mybatis中-gt-lt-不识别"><a href="#mybatis中-gt-lt-不识别" class="headerlink" title="mybatis中  &gt;  , &lt;   不识别"></a>mybatis中  &gt;  , &lt;   不识别</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&amp;lt;  等于 ’<span class="tag">&lt;<span class="name">‘</span> </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&amp;<span class="attr">gt</span>;  等于 '&gt;</span>'</span></pre></td></tr></table></figure>
+
+
       
 
       
@@ -197,6 +278,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">project</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">javaweb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -247,7 +343,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/README.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/05/%E4%BC%A0%E6%99%BA%E5%81%A5%E5%BA%B7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -259,6 +355,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/05/mybatis%E5%A4%9A%E5%8F%82%E6%95%B0%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mybatis多参数查询数据</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 <span id="busuanzi_container_page_pv">
         本文阅读量: <span id="busuanzi_value_page_pv"></span>次
 </span>
@@ -320,7 +426,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -190,23 +190,8 @@
         <hr>
 <h4 id="当-mybatis多参数查询时，会如下报错误"><a href="#当-mybatis多参数查询时，会如下报错误" class="headerlink" title="当 mybatis多参数查询时，会如下报错误"></a>当 mybatis多参数查询时，会如下报错误</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter <span class="string">'username'</span> not found. Available parameters are [arg1, arg0, param1, param2]</span></pre></td></tr></table></figure>
 
-<h5 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h5><p>​    当传入多个参数时，映射文件无法获得传入的参数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MenuDao</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function">List&lt;Menu&gt; <span class="title">findMenuByParentMenuId</span><span class="params">( Integer menuId,  String username)</span></span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<h5 id="解决方法一般有三种"><a href="#解决方法一般有三种" class="headerlink" title="解决方法一般有三种"></a>解决方法一般有三种</h5><p>​    1）利用参数出现的顺序</p>
-<p>​        将参数用arg1, arg0  或  param1, param2 替代</p>
-<p>​        注意参数顺序</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findMenuByParentMenuId"</span>  <span class="attr">resultType</span>=<span class="string">"cn.itcast.pojo.Menu"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">      SELECT DISTINCT m.* FROM</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       t_user u ,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">       t_user_role ur ,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">       t_role_menu rm ,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       t_menu m</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">       WHERE 1=1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">       AND  ur.user_id=u.id</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">       AND rm.role_id=ur.role_id</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">       AND m.id=rm.menu_id</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">       AND m.level=2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">       AND u.username=#&#123;param2&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">       AND m.parentmenuid=#&#123;param1&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">       ORDER BY  m.priority</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span></pre></td></tr></table></figure>
-
-<p>​    2）使用注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function">List&lt;Menu&gt; <span class="title">findMenuByParentMenuId</span><span class="params">(@Param(<span class="string">"menuId"</span>)</span> Integer menuId, @<span class="title">Param</span><span class="params">(<span class="string">"username"</span>)</span> String username)</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>​    3）把接口的形参改为Map</p>
-<p>​    1.在xxxserviceImpl层将参数封装到map集合中，参数传递map</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Map&lt;String,Object&gt; map =  <span class="keyword">new</span> HashMap&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	map.put(<span class="string">"menuId"</span>,menuId);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	map.put(<span class="string">"username"</span>,username);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">List&lt;Menu&gt; sonmenuList = menuDao.findMenuByParentMenuId(map);</span></pre></td></tr></table></figure>
-
-<p>​    2.xxxDao.xml 中将参数类型改为  parameterType=”map”</p>
-
+<h5 id=""><a href="#" class="headerlink" title=""></a>
+        
       
 
       
@@ -639,14 +624,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">mybatis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">spring</a>
               </li>
              
@@ -655,19 +632,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">LINUX</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">order</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">javaweb</a>
               </li>
             
             <div class="clearfix"></div>

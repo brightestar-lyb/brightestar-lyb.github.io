@@ -164,21 +164,107 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-RabbitMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-熔断器Hystrix" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/08/RabbitMQ/">RabbitMQ</a>
+      <a class="article-title" href="/2019/12/09/%E7%86%94%E6%96%AD%E5%99%A8Hystrix/">熔断器Hystrix</a>
     </h1>
   
 
         
         
-<a href="/2019/12/08/RabbitMQ/" class="archive-article-date">
-  	<time datetime="2019-12-08T13:47:55.804Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
+<a href="/2019/12/09/%E7%86%94%E6%96%AD%E5%99%A8Hystrix/" class="archive-article-date">
+  	<time datetime="2019-12-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
+</a>
+	
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>​    Hystrix是Netflix公司开发的一款应用在微服务系统中的提供保户机制的组件。</p>
+<p>是一个开源的延迟和容错库，用于隔离访问远程服务、第三方库、防止出现级联失效。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">微服务</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">Hystrix</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/09/%E7%86%94%E6%96%AD%E5%99%A8Hystrix/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-RabbitMQ小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/08/RabbitMQ%E5%B0%8F%E7%BB%93/">RabbitMQ</a>
+    </h1>
+  
+
+        
+        
+<a href="/2019/12/08/RabbitMQ%E5%B0%8F%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2019-12-08T08:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
 </a>
 	
 
@@ -188,8 +274,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>title： RabbitMQ简单介绍<br>date： 2019-12-08 10:26:38<br>tags： rabbitMQ</p>
-<hr>
 <h4 id="什么是消息队列"><a href="#什么是消息队列" class="headerlink" title="什么是消息队列"></a>什么是消息队列</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">MQ全称 Message Queue ，消息队列是应用程序与应用程序之间通信的方法</span></pre></td></tr></table></figure>
 
 <h4 id="MQ是消息通信的模型；实现MQ的大致有两种主流方式：AMQP、JMS"><a href="#MQ是消息通信的模型；实现MQ的大致有两种主流方式：AMQP、JMS" class="headerlink" title="MQ是消息通信的模型；实现MQ的大致有两种主流方式：AMQP、JMS"></a>MQ是消息通信的模型；实现MQ的大致有两种主流方式：AMQP、JMS</h4><p><strong>AMQP：Advanced Message Queuing Protocol  高级消息队列协议</strong></p>
@@ -202,11 +286,26 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">AMQP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">rabbitMQ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/08/RabbitMQ/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/08/RabbitMQ%E5%B0%8F%E7%BB%93/">展开全文 >></a>
         </p>
       
 
@@ -259,8 +358,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="了解Springboot是什么，有什么作用"><a href="#了解Springboot是什么，有什么作用" class="headerlink" title="了解Springboot是什么，有什么作用?"></a>了解Springboot是什么，有什么作用?</h4><hr>
-<h5 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一班把SpringBoot称为搭建程序的脚手架或者说是便捷搭建基于Spring工程</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">的脚手架。其最主要的作用就是帮助开发者快速的搭建庞大的Spring项目，并且尽可能的减少一切xml配置，做到开箱即用，迅速上手，让开发人员关注开发而非配置。</span></pre></td></tr></table></figure>
+        <hr>
+<h4 id="了解Springboot是什么，有什么作用"><a href="#了解Springboot是什么，有什么作用" class="headerlink" title="了解Springboot是什么，有什么作用?"></a>了解Springboot是什么，有什么作用?</h4><h5 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一班把SpringBoot称为搭建程序的脚手架或者说是便捷搭建基于Spring工程</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">的脚手架。其最主要的作用就是帮助开发者快速的搭建庞大的Spring项目，并且尽可能的减少一切xml配置，做到开箱即用，迅速上手，让开发人员关注开发而非配置。</span></pre></td></tr></table></figure>
         
       
 
@@ -339,8 +438,6 @@
       
         <hr>
 <h4 id="当-mybatis多参数查询时，会如下报错误"><a href="#当-mybatis多参数查询时，会如下报错误" class="headerlink" title="当 mybatis多参数查询时，会如下报错误"></a>当 mybatis多参数查询时，会如下报错误</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter <span class="string">'username'</span> not found. Available parameters are [arg1, arg0, param1, param2]</span></pre></td></tr></table></figure>
-
-<h5 id=""><a href="#" class="headerlink" title=""></a>
         
       
 
@@ -879,6 +976,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">springboot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">project</a>
               </li>
              
@@ -887,7 +988,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">AMQP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">rabbitMQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">微服务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Hystrix</a>
               </li>
             
             <div class="clearfix"></div>

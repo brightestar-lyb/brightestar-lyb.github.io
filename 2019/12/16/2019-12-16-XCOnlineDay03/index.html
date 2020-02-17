@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>XCOnlineDay03 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果改变不了自己，就去改变世界">
+  <meta name="description" content="自定义条件查询 定义条件匹配器 响应结果至少包含：操作是否成功，操作代码，提示信息  定义响应模型 定义添加接口 页面唯一索引 根据页面唯一索引查询页面是否存在 添加根据页面名称、站点Id、页面webpath查询页面方法，此方法用于校验页面是否存在 使用 CmsPageRepository提供的save方法   返回按钮取到当前路由 返回 修改页面1.查询当前页面进行数据回显 Cmspage f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XCOnlineDay03">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;2019-12-16-XCOnlineDay03&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="如果改变不了自己，就去改变世界">
+<meta property="og:description" content="自定义条件查询 定义条件匹配器 响应结果至少包含：操作是否成功，操作代码，提示信息  定义响应模型 定义添加接口 页面唯一索引 根据页面唯一索引查询页面是否存在 添加根据页面名称、站点Id、页面webpath查询页面方法，此方法用于校验页面是否存在 使用 CmsPageRepository提供的save方法   返回按钮取到当前路由 返回 修改页面1.查询当前页面进行数据回显 Cmspage f">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-12-15T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
@@ -186,7 +186,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<p>自定义条件查询</p>
+<p>定义条件匹配器</p>
+<p>响应结果至少包含：操作是否成功，操作代码，提示信息</p>
+<ol>
+<li>定义响应模型</li>
+<li>定义添加接口</li>
+<li>页面唯一索引</li>
+<li>根据页面唯一索引查询页面是否存在</li>
+<li>添加根据页面名称、站点Id、页面webpath查询页面方法，此方法用于校验页面是否存在</li>
+<li>使用 CmsPageRepository提供的save方法 </li>
+</ol>
+<h5 id="返回按钮"><a href="#返回按钮" class="headerlink" title="返回按钮"></a>返回按钮</h5><p>取到当前路由</p>
+<p>返回</p>
+<h5 id="修改页面"><a href="#修改页面" class="headerlink" title="修改页面"></a>修改页面</h5><p>1.查询当前页面进行数据回显</p>
+<p>Cmspage findById(id)</p>
+<p>2.修改页面</p>
+<p>Cmspage Update(String id ,Cmspage cmspage)</p>
+<h4 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h4><ul>
+<li><p>在Service方法中编码的顺序是先校验判断，有问题则抛出具体异常信息，最后执行具体的业务操作。返回成功信息</p>
+</li>
+<li><p>在统一异常处理类中情趣捕获，无需controller捕获异常，向用户返回统一规范的响应信息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>异常格式=错误代码+错误信息</p>
+</li>
+<li><p>异常类型 ：自定义异常CustomException  和不可预知异常 Exception </p>
+<p>@ControllerAdvice，是Spring3.2提供的新注解,它是一个Controller增强器,可对controller中被 @RequestMapping注解的方法加一些逻辑处理。最常用的就是异常处理</p>
+<p>@ControllerAdvice ，很多初学者可能都没有听说过这个注解，实际上，这是一个非常有用的注解，顾名思义，这是一个增强的 Controller。使用这个 Controller ，可以实现三个方面的功能：</p>
+<ol>
+<li>全局异常处理</li>
+<li>全局数据绑定</li>
+<li>全局数据预处理</li>
+</ol>
+</li>
+</ul>
+<p>获取 slf4j 日志对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">private static Logger log &#x3D; LoggerFactory.getLogger(XhPayController.class);</span></pre></td></tr></table></figure>
+
+<p>将Json对象转成key/value对  Json.Stringify</p>
+<p>反之  Json.parse（）</p>
+<hr>
+<h4 id="freemarker"><a href="#freemarker" class="headerlink" title="freemarker"></a>freemarker</h4><p>插值</p>
+<p>FTL指令</p>
+<p>注释</p>
+
       
 
       
@@ -279,6 +329,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/02/17/springboot%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringBoot读取配置文件内容的三种方式
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/12/15/2019-12-15-XCOnlineDay02/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">XCOnlineDay02</div>
@@ -328,7 +387,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 BrighteStar
+    		&copy; 2020 BrighteStar
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -449,14 +508,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">mybatis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">spring</a>
               </li>
              
@@ -469,7 +520,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">architecture</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,6 +537,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">architecture</a>
               </li>
              
               <li class="article-tag-list-item">
